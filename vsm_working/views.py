@@ -57,7 +57,7 @@ def index(request):
         for item in range(0,50):
             if cosineSim[item] > 0:
                 documents_alpha_0.append(item+1)
-            if cosineSim[item] + 0.004 > 0.005:
+            if cosineSim[item] > 0.001:
                 documents_alpha_0_001.append(item+1)
         print(query['queryholder'])
         print(documents_alpha_0_001)
